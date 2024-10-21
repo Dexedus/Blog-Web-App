@@ -38,25 +38,32 @@ h3{
     z-index: -1000;
 }
 
+
 /*Header Styling*/
 header{
     position: fixed;
     display: flex;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background-color: #4A4947;
     color: white;
     align-items: center;
     font-family: sans-serif;
 }
+
 #HeaderTitle{
     margin-left: 20px;
+    width: 380px;
 }
+
 #HeaderList{
     display: flex;
     list-style: none;
+    margin-left: -50px;
+    width: 400px;
 
 }
+
 .HeaderItem{
     margin-inline: 20px;
     color: white;
@@ -66,6 +73,7 @@ header{
     transform: scale(1.3);
     color: #b3b3b3;
 }
+
 a{
     color: white;
     text-decoration: none;
@@ -75,23 +83,29 @@ a:hover{
     color: #b3b3b3;
 }
 
+#Credit{
+    width: 100%;
+    text-align: end;
+    margin-right: 20px;
+}
+
 
 
 
 main{
     display: flex;
     margin-top: 20px;
+    width: 100%;
 }
-
-
 
 
 /*Posts Styling*/
 .Posts-Container{
     display: block;
 }
+
 section{
-    margin-left: 125px;
+    margin-left: 6vw;
     background-color: #D8D2C2;
     width: 40vw;
     min-width: 400px;
@@ -100,12 +114,14 @@ section{
     border-radius: 20px;
     margin-bottom: 20px;
 }
+
 .Title{
     font-family: sans-serif;
     font-size: 2em;
     padding-top: 5px;
     text-align: center;
 }
+
 .TimeAuthor-Box{
     display: flex;
     justify-content: space-between;
@@ -117,22 +133,25 @@ section{
     width: 100%;
     margin: 2px;
 }
+
 .Content-Box{
     min-height: 200px;
     background-color: #FAF7F0;
     border: solid 2px rgb(145, 145, 145);
 }
+
 .Button-Container{
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 button{
     height: 70%;
     font-size: 1em;
     border-radius: 10px;
-    border: solid 2px rgb(145, 145, 145);
+    border: none;
     transition: background-color 1s, color 1s, border 1s, transform 1s ease-in-out;
     width: 150px;
 }
@@ -157,9 +176,9 @@ button{
     background-color: rgb(150, 42, 42);
 }
 
-
-
-
+.Button{
+    color: #575757;
+}
 
 
 /*Bio Styling*/
@@ -169,7 +188,7 @@ button{
     align-items: center;
     background: linear-gradient(300deg, #ebe8e2, #D8D2C2, #d6ccb1);
     width: 20vw;
-    min-width: 200px;
+    min-width: 250px;
     margin: 20px;
     min-height: 700px;
     border-radius: 20px;
@@ -180,22 +199,26 @@ button{
     border-radius: 50%;
     border: solid #ffffff;
 }
+
 #MyName{
     font-size: 3em;
     margin: 0;
 }
+
 .Line{
     width: 80%;
     height: 3px;
     border-radius: 50%;
     background-color: #2c2c2c;
 }
+
 #Bio{
     text-align: center;
     font-family: sans-serif;
     font-size: large;
     width: 80%;
 }
+
 .Socials-Container{
     display: flex;
     justify-content: center;
@@ -204,6 +227,7 @@ button{
     justify-content: center;
     align-items: center;
 }
+
 .socials{
     height: 50px;
     width: 50px;
@@ -212,12 +236,173 @@ button{
 }
 
 
-
 /*Footer Styling*/
 footer{
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: end;
     background-color: #4A4947;
     color: white;
+}
+#C{
+    margin-right: 20px;
+}
+
+
+/*Edit/Update Page Styling*/
+body{
+    align-items: center;
+}
+
+#Header{
+    background-color: #4A4947;
+    color: white;
+    width: 100%;
+}
+
+#HeaderListEditpage{
+    margin-left: -140px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+}
+
+#HeaderTitleEdit{
+    margin-right: 120px;
+}
+
+#Heading{
+    margin-top: 100px;
+    color: white;
+}
+
+form{
+    background-color: #D8D2C2;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.Form-Info{
+    width: 60%;
+    margin-block: 20px;
+}
+
+.Smaller{
+    width: 20vw;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+textarea{
+    border-radius: 5px;
+    border: none;
+}
+
+.Submit-Button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    transition: background-color 1s, color 1s, transform 1s;
+}
+.Submit-Button:hover{
+    transform: scale(1.1);
+    background-color: #B17457;
+    color: white;
+}
+
+
+/*media querys*/
+
+@media (max-width: 830px){
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Fixed-Bio{
+        min-height: 500px;
+        min-width: 80vw;
+    }
+
+    .Socials-Container{
+        margin-top: 20px;
+    }
+
+    section{
+        margin: 0;
+        margin-bottom: 20px;
+        min-width: 80vw;
+    }
+}
+
+@media (max-width: 600px){
+    #HeaderTitle{
+        font-size: 20px;
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    #HeaderList{
+        margin: 0;
+    }
+
+    form{
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 470px){
+
+    #Header{
+        display: flex;
+        justify-content: center;
+    }
+
+    header{
+        font-size: small;
+    }
+
+    #Fixed-Bio{
+        min-height: 500px;
+        min-width: 300px;
+    }
+    
+    #Credit{
+        width: 50px;
+    }
+}
+
+@media (max-width: 370px){
+
+    #HeaderTitle{
+        font-size: 15px;
+        margin-right: 2px;
+    }
+
+    header{
+        font-size: smaller;
+    }
+    
+    #HeaderTitleEdit{
+        font-size: 20px;
+    }
+
+    #HeaderList{
+        padding: 0px;
+    }
+
+    #Credit{
+        margin-left: 5px;
+    }
 }

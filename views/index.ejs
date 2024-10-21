@@ -4,20 +4,21 @@
     <h1 id="HeaderTitle">Bits and Blogs</h1>
     <ul id="HeaderList">
 
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="symbol bi bi-house" viewBox="0 0 16 16">
             <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
           </svg></li>
 
         <li class="HeaderItem"><a href="#Home">Home</a></li>
 
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="symbol bi bi-plus-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
           </svg></li>
 
-        <li class="HeaderItem">New Post</li>
+        <li class="HeaderItem"><a href="/new">New Post</a></li>
 
     </ul>
+    <p id="Credit">Coded by Karl Fleming</p>
 </header>
 
 <p id="Home">Link</p>
@@ -53,20 +54,23 @@
 
     
     <div class="Posts-Container">
+      <% posts.forEach(post=> { %>
       <section>
-        <h3 class="Title">This is a Placeholder</h3>
+        <h3 class="Title"><%=post.title%></h3>
         <div class="TimeAuthor-Box">
-         <p class="Time">16:40 02/02/200</p>
-         <p class="Author">Karl Fleming</p>
+         <p class="Time"><%=post.date %></p>
+         <p class="Author"><%=post.author%></p>
         </div>
         <div class="Content-Box">
-            <p class="Content caveat-Font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="Content caveat-Font"><%=post.content%></p>
         </div>
         <div class="Button-Container">
-            <button class="Edit-Button">Update</button>
-            <button class="Delete-Button">Delete</button>
+            <button class="Edit-Button"><a class="Button" href="/edit/<%= post.id %>">Update</a></button>
+            <button class="Delete-Button"><a class="Button" href="/api/posts/delete/<%= post.id %>">Delete</a></button>
         </div>
       </section>
+      <% }); %>
+    </div>
 
 </main>
 
