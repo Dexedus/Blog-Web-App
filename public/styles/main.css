@@ -255,6 +255,7 @@ body{
 }
 
 #Header{
+    z-index: 5;
     background-color: #4A4947;
     color: white;
     width: 100%;
@@ -270,6 +271,7 @@ body{
 
 #HeaderTitleEdit{
     margin-right: 120px;
+    margin-left: 20px
 }
 
 #Heading{
